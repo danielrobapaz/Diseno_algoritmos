@@ -1,6 +1,5 @@
 from Virtual_Array import Virtual_Array
 
-
 def mostrar_opciones():
     return """Opciones: 
               ASIGNAR POS VAL
@@ -10,6 +9,10 @@ def mostrar_opciones():
 def main():
     n = int(input('Ingrese cantidad de elementos: '))
 
+    if n <= 0:
+        print('Cantidad de elementos inesperada.')
+        return
+    
     virtual_arr = Virtual_Array(n)
 
 
